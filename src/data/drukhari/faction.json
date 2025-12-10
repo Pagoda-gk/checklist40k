@@ -1,0 +1,14 @@
+{
+  "name": "Drukhari",
+  "detachments": [
+    "Spectacle of Spite",
+    "Reaper's Wager"
+  ],
+  "units": [
+    "Archon",
+    "Hellions",
+    "Kabalite Warriors",
+    "Succubus",
+    "Wyches"
+  ]
+}

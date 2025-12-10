@@ -1,0 +1,10 @@
+{
+  "name": "Space Wolves",
+  "detachments": [
+    "Saga of the Hunter",
+    "Saga of the Beastslayer"
+  ],
+  "units": [
+    "Logan Grimnar"
+  ]
+}
