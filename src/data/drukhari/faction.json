@@ -2,13 +2,21 @@
   "name": "Drukhari",
   "detachments": [
     "Spectacle of Spite",
-    "Reaper's Wager"
+    "Reaper's Wager",
+    "Skysplinter Assault"
   ],
   "units": [
     "Archon",
+    "Cronos",
+    "Haemonculus",
     "Hellions",
+    "Incubi",
     "Kabalite Warriors",
+    "Lady Malys",
+    "Mandrakes",
+    "Scourges (Heavy Weapons)",
     "Succubus",
+    "Wracks",
     "Wyches"
   ]
 }

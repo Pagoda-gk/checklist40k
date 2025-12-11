@@ -1,8 +1,8 @@
 export default [
     {
         name: "Pack's Quarry",
-        timing: ["all"],
-        shortDesc: "Saga +1 to hit",
+        timing: ["myFight", "oppFight"],
+        shortDesc: "Saga +1 to hit, + Wound if Saga complete",
         fullRules: `Each time a model in a SPACE WOLVES unit from your army makes a melee attack that targets an enemy unit, if that enemy unit is within Engagement Range of one or more other ADEPTUS ASTARTES units from your army, or if the attacking unit contains more models than that enemy unit: 
 Add 1 to the Hit roll. 
 If your Saga is completed (see below), add 1 to the Wound roll as well.
@@ -15,25 +15,25 @@ If your Saga is completed (see below), add 1 to the Wound roll as well.
  Strike Force 3
  Onslaught 4`,
         addedBy: "Saga of the Hunter",
-        type: "reminder"
+        type: "ability"
     },
 
 
     {
         name: "Oath of Moment",
-        timing: ["all"],
-        shortDesc: "re-roll to hit",
+        timing: ["myCommand"],
+        shortDesc: "Choose Oath of Moment target",
         fullRules: `If your Army Faction is ADEPTUS ASTARTES, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target you can re-roll the Hit roll.`,
         addedBy: "Saga of the Hunter",
-        type: "reminder"
+        type: "ability"
     },
     {
         name: "Oath of Moment",
-        timing: ["all"],
-        shortDesc: "OoM re-roll to hit",
+        timing: ["myCommand"],
+        shortDesc: "Choose Oath of Moment target",
         fullRules: `If your Army Faction is ADEPTUS ASTARTES, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target you can re-roll the Hit roll.`,
         addedBy: "Saga of the Beastslayer",
-        type: "reminder"
+        type: "ability"
     },
 
     {
@@ -119,17 +119,17 @@ EFFECT: Select one enemy unit visible to both of your units. Until the end of th
 
     {
         name: "Legendary Slayers",
-        timing: ["all"],
-        shortDesc: "Lethal hits for Character, Monster or Vehicle",
+        timing: ["myShoot", "myFight", "oppFight"],
+        shortDesc: "Lethal hits if Saga complete, if not just for Character, Monster or Vehicle",
         fullRules: `Each time an ADEPTUS ASTARTES model from your army makes an attack, if that attack targets a CHARACTER, MONSTER or VEHICLE unit or if your Saga is completed (see below), that attack has the [lethal hits] ability.
         Saga of the Beastslayer
-At the start of the first battle round, your Beastslayer tally is 0, and you determine your Beastslayer target by halving the number of units from your opponent’s army (including those embarked within TRANSPORTS) that have one or more of the following keywords (rounding up): CHARACTER, MONSTER, VEHICLE.
+At the start of the first battle round, your Beastslayer tally is 0, and you determine your Beastslayer target by halving the number of units from your opponent's army (including those embarked within TRANSPORTS) that have one or more of the following keywords (rounding up): CHARACTER, MONSTER, VEHICLE.
 
 Each time an ADEPTUS ASTARTES unit from your army shoots or fights, after all of those attacks have been resolved, add 1 to your Beastslayer tally for each enemy unit with one or more of the following keywords destroyed by those attacks: CHARACTER, MONSTER, VEHICLE.
 
 Once your Beastslayer tally is equal to or greater than your Beastslayer target, your Saga is completed.`,
         addedBy: "Saga of the Beastslayer",
-        type: "reminder"
+        type: "ability"
     },
     {
         name: "Unbridled Ferocity",

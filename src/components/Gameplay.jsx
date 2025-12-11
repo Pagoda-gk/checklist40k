@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+
 const PHASE_ORDER = [
   "myCommand",
   "myMove",
@@ -31,7 +32,7 @@ const PHASE_NAMES = {
   oppEndOfFight: "End of Opponent's Fight Phase"
 };
 
-export default function Gameplay({ gameData }) {
+export default function Gameplay({ gameData, goHome }) {
   const { phases, rules, firstPlayer = "me" } = gameData;
 
   // ----------------------
@@ -53,18 +54,9 @@ export default function Gameplay({ gameData }) {
     setIndex((i) => (i - 1 + PHASE_ORDER.length) % PHASE_ORDER.length); // loop backward
   };
 
-  // ---------------- REMINDER WIDGET ----------------
-  const [openReminderIndex, setOpenReminderIndex] = useState(null);
-  const [reminderNotes, setReminderNotes] = useState({});
+  // ---------------- FREE NOTES WIDGET ----------------
+  const [notes, setNotes] = useState("");
 
-  const reminders = rules.filter(r => r.type === "reminder");
-
-  const updateReminderNote = (index, value) => {
-    setReminderNotes(prev => ({
-      ...prev,
-      [index]: value
-    }));
-  };
 
 
 
@@ -128,7 +120,9 @@ export default function Gameplay({ gameData }) {
           </>
         )}
 
-
+ <button className="home-button" onClick={goHome}>
+          ⟵ Home
+        </button>
 
         {stratagems.length === 0 && abilities.length === 0 && (
           <p className="no-rules">No rules this phase.</p>
@@ -143,61 +137,17 @@ export default function Gameplay({ gameData }) {
           </button>
         </div>
       </div>
-      <div className="reminder-widget">
-
-        {/* Collapsed list */}
-        {openReminderIndex === null && (
-          <div className="reminder-list">
-            {reminders.map((r, i) => (
-              <div
-                key={i}
-                className="reminder-list-item"
-                onClick={() => setOpenReminderIndex(i)}
-              >
-                <span className="reminder-line">
-                  <strong>{r.name}</strong>
-                  {"  "}
-                  {r.shortDesc}
-                  {reminderNotes[i] ? `  ${reminderNotes[i]}` : ""}
-                </span>
-
-                <span className="arrow">▶</span>
-              </div>
-            ))}
-          </div>
-        )}
-
-        {/* Expanded single reminder */}
-        {openReminderIndex !== null && (
-          <div className="reminder-expanded">
-
-            <div
-              className="reminder-back"
-              onClick={() => setOpenReminderIndex(null)}
-            >
-              ◀ Back
-            </div>
-
-            <div className="reminder-card">
-              <strong>{reminders[openReminderIndex].name}</strong>
-
-              <p className="reminder-full">
-                {reminders[openReminderIndex].fullRules}
-              </p>
-
-              <textarea
-                className="reminder-input"
-                placeholder="Notes, targets, tallies, etc..."
-                value={reminderNotes[openReminderIndex] || ""}
-                onChange={(e) => updateReminderNote(openReminderIndex, e.target.value)}
-              />
-
-              <em>{reminders[openReminderIndex].addedBy}</em>
-            </div>
-          </div>
-        )}
-
+            {/* Free notes panel */}
+      <div className="notes-widget">
+        <h3 className="notes-header">Notes</h3>
+        <textarea
+          className="notes-input"
+          placeholder="Write anything you want here… (targets, CP spent, score, reminders, etc.)"
+          value={notes}
+          onChange={(e) => setNotes(e.target.value)}
+        />
       </div>
+
 
     </div>
   );

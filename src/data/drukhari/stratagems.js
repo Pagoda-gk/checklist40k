@@ -63,7 +63,7 @@ EFFECT: Until the end of the turn, enemy units cannot use the Fire Overwatch Str
     name: "Dance Macabre",
     timing: ["oppMove"],
     shortDesc: "Reactive Normal move",
-    fullRules: `WHEN: Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.
+    fullRules: `WHEN: Your opponent's Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.
 
 TARGET: One DRUKHARI INFANTRY or HARLEQUINS INFANTRY unit from your army that is within 9" of that enemy unit.
 
@@ -73,8 +73,8 @@ EFFECT: Your unit can make a Normal move of up to D6". If your unit is currently
   },
   {
     name: "Combat Drugs",
-    timing: ["all"],
-    shortDesc: "",
+    timing: ["myCommand"],
+    shortDesc: "Roll for 2 Combat Drugs or choose 1",
     fullRules: `At the start of your Command phase, select which Combat Drugs will be active for your army until the start of your next Command phase. To do so, either select one from the list below (you cannot select the same Combat Drug more than once per battle), or randomly select two by rolling two D6. When doing so randomly, Combat Drugs you have previously selected can become active again, but if you randomly select one that is already active for your army, it has no additional effect.
 
 1. Adrenalight
@@ -95,7 +95,7 @@ Add 1 to the Strength characteristic of melee weapons equipped by WYCH CULT mode
 6. Splintermind
 Improve the Leadership characteristic of WYCH CULT models from your army by 1, and improve the Ballistic Skill characteristic of ranged weapons equipped by WYCH CULT models from your army by 1.`,
     addedBy: "Spectacle of Spite",
-    type: "reminder"
+    type: "ability"
   },
 
 
@@ -178,5 +178,98 @@ TARGET: One WYCH CULT unit from your army that was selected as the target of one
 EFFECT: Until the end of the phase, models in your unit have a 5+ invulnerable save.`,
     addedBy: "Spectacle of Spite",
     type: "stratagem"
+  },
+
+
+  {
+    name: "Rain of Cruelty",
+    timing: ["myShoot", "myFight"],
+    shortDesc: "Disembark, gain Lance and Ignores Cover",
+    fullRules: `Each time a DRUKHARI unit from your army disembarks from a TRANSPORT, until the end of the turn:
+Ranged weapons equipped by models in that disembarking unit have the [ignores cover] ability.
+Melee weapons equipped by models in that disembarking unit have the [lance] ability.`,
+    addedBy: "Skysplinter Assault",
+    type: "ability"
+  },
+
+
+  {
+    name: "Vicious Blades",
+    timing: ["myFight", "oppFight"],
+    shortDesc: "Transport causes Mortal Wounds",
+    fullRules: `WHEN: Fight phase, just after a DRUKHARI TRANSPORT from your army has selected its targets.
+
+TARGET: That TRANSPORT.
+
+EFFECT: After your TRANSPORT has fought, select one enemy unit that was the target of one or more of those attacks and roll one D6 for each model embarked within your TRANSPORT, adding 1 to the result if that embarked model is a WRACKS model: for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds).`,
+    addedBy: "Skysplinter Assault",
+    type: "stratagem"
+  },
+
+  {
+    name: "Wraithlike Retreat",
+    timing: ["myEndOfFight", "oppEndOfFight"],
+    shortDesc: "Normal or Fall Back move",
+    fullRules: `WHEN: End of the Fight phase.
+
+TARGET: One DRUKHARI INFANTRY unit from your army that fought this phase.
+
+EFFECT: Your unit can make a Normal or Fall Back move, but unless it is a WYCHES unit, it must end that move wholly within 3" horizontally and 5" vertically of a friendly DRUKHARI TRANSPORT and must embark within that TRANSPORT at the end of that move (otherwise, it cannot make that move).`,
+    addedBy: "Skysplinter Assault",
+    type: "stratagem"
+  },
+
+  {
+    name: "Pounce on the Prey",
+    timing: ["myMove"],
+    shortDesc: "Disembark then charge",
+    fullRules: `WHEN: Your Movement phase, just after a DRUKHARI INFANTRY unit from your army disembarks from a TRANSPORT that made a Normal move this phase.
+
+TARGET: That INFANTRY unit.
+
+EFFECT: Until the end of the turn, your unit is eligible to declare a charge.`,
+    addedBy: "Skysplinter Assault",
+    type: "stratagem"
+  },
+
+  {
+    name: "Skyborne Anihilation",
+    timing: ["myShoot"],
+    shortDesc: "Disembark, ranged weapons have Sustained Hits",
+    fullRules: `WHEN: Your Shooting phase.
+
+TARGET: One DRUKHARI unit from your army that has not been selected to shoot this phase and that disembarked from a TRANSPORT this turn.
+
+EFFECT: Until the end of the phase, ranged weapons equipped by models in your unit have the [SUSTAINED HITS 1] ability, or the [SUSTAINED HITS 2] ability if your unit is a KABALITE WARRIORS or HAND OF THE ARCHON unit.`,
+    addedBy: "Skysplinter Assault",
+    type: "stratagem"
+  },
+
+  {
+    name: "Swooping Mockery",
+    timing: ["oppMove"],
+    shortDesc: "Transport makes a 6\" move",
+    fullRules: `WWHEN: Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.
+
+TARGET: One DRUKHARI TRANSPORT from your army that is within 9" of that enemy unit.
+
+EFFECT: Your TRANSPORT can make a Normal move of up to 6".`,
+    addedBy: "Skysplinter Assault",
+    type: "stratagem"
+  },
+
+
+  {
+    name: "Night Shield",
+    timing: ["oppShooting"],
+    shortDesc: "4+ Invul for Vehicle",
+    fullRules: `WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets.
+
+TARGET: One DRUKHARI VEHICLE unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT: Until the end of the phase, models in your unit have a 4+ invulnerable save.`,
+    addedBy: "Skysplinter Assault",
+    type: "stratagem"
   }
+
 ];
