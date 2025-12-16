@@ -572,3 +572,12 @@ button:focus-visible {
     height: 80px;
   }
 }
+
+.cp-cost {
+  font-weight: 800;
+  font-size: 1rem;
+  color: #727f92; /* soft, readable blue-grey */
+  margin-left: 8px;
+  white-space: nowrap;
+}
+

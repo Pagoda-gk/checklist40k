@@ -11,7 +11,7 @@ export default [
     name: "Battlefield Butchery (Pain)",
     timing: ["myFight", "oppFight"],
     shortDesc: "Add 1 to Attacks and Strength",
-    fullRules: `In the Fight phase, when you select this unit to fight, you can spend 1 Pain token to Empower this unit. While Empowered, add 1 to the Attacks and Strength characteristics of this unit’s melee weapons.`,
+    fullRules: `In the Fight phase, when you select this unit to fight, you can spend 1 Pain token to Empower this unit. While Empowered, add 1 to the Attacks and Strength characteristics of this unit's melee weapons.`,
     addedBy: "Hellions",
     type: "ability"
   },
@@ -43,7 +43,7 @@ export default [
     name: "Master of Blades (Pain)",
     timing: ["myFight", "oppFight"],
     shortDesc: "Add 1 to Wound roll (Unit)",
-    fullRules: `In the Fight phase, when you select this model’s unit to fight, you can spend 1 Pain token to Empower that unit. While that unit is Empowered, each time a model in that unit makes a melee attack, add 1 to the Wound roll.`,
+    fullRules: `In the Fight phase, when you select this model's unit to fight, you can spend 1 Pain token to Empower that unit. While that unit is Empowered, each time a model in that unit makes a melee attack, add 1 to the Wound roll.`,
     addedBy: "Drazhar",
     type: "ability"
   },
@@ -52,7 +52,7 @@ export default [
     name: "Fleshcraft (Pain)",
     timing: ["myCommand"],
     shortDesc: "Return D3+1 Bodyguard",
-    fullRules: `In your Command phase, you can spend 1 Pain token to Empower this model’s unit. Each time you do, you can return up to D3+1 destroyed Bodyguard models to that unit.`,
+    fullRules: `In your Command phase, you can spend 1 Pain token to Empower this model's unit. Each time you do, you can return up to D3+1 destroyed Bodyguard models to that unit.`,
     addedBy: "Haemonculus",
     type: "ability"
   },
@@ -61,25 +61,15 @@ export default [
     name: "Fear Incarnate",
     timing: ["oppCommand"],
     shortDesc: "Battleshock if within 6\" and below Start Str",
-    fullRules: `While an enemy unit is within 6" of this model, worsen the Leadership characteristic of models in that unit by 1. In addition, in the Battle-shock step of your opponent’s Command phase, if such an enemy unit is below its Starting Strength, it must take a Battle-shock test.`,
+    fullRules: `While an enemy unit is within 6" of this model, worsen the Leadership characteristic of models in that unit by 1. In addition, in the Battle-shock step of your opponent's Command phase, if such an enemy unit is below its Starting Strength, it must take a Battle-shock test.`,
     addedBy: "Haemonculus",
     type: "ability"
   },
-
-  {
-    name: "Pain Adept",
-    timing: ["myCommand"],
-    shortDesc: "Extra Pain Token on 4+",
-    fullRules: `In your Command phase, if one or more models from your army with this ability are on the battlefield, roll one D6: on a 4+, you gain 1 Pain token.`,
-    addedBy: "Haemonculus",
-    type: "ability"
-  },
-
   {
     name: "Archon of the Poisoned Tongue (Pain)",
     timing: ["myShooting", "myFight", "oppFight"],
     shortDesc: "Sustained hits 1 or Lethal hits (Unit)",
-    fullRules: `In your Shooting phase or the Fight phase, when you select this model’s
+    fullRules: `In your Shooting phase or the Fight phase, when you select this model's
 unit to shoot or fight, you can spend 1 Pain token to Empower that unit. If you do, select one of the following abilities: [SUSTAINED HITS 1]; [LETHAL HITS]. Until the end of the phase, while that unit is Empowered, weapons equipped by models in that unit have that selected ability.`,
     addedBy: "Lady Malys",
     type: "ability"
@@ -90,7 +80,7 @@ unit to shoot or fight, you can spend 1 Pain token to Empower that unit. If you 
     name: "Brides of Death (Pain)",
     timing: ["oppFight", "myfight"],
     shortDesc: "Improve Str&AP by 1 (Unit)",
-    fullRules: `In the Fight phase, when you select this model’s unit to fight, you can spend 1 Pain token to Empower that unit. While that unit is Empowered, each time a model in that unit makes a melee attack, improve the Strength and Armour Penetration characteristics of that attack by 1.`,
+    fullRules: `In the Fight phase, when you select this model's unit to fight, you can spend 1 Pain token to Empower that unit. While that unit is Empowered, each time a model in that unit makes a melee attack, improve the Strength and Armour Penetration characteristics of that attack by 1.`,
     addedBy: "Lelith Hesperax",
     type: "ability"
   },
@@ -110,7 +100,7 @@ unit to shoot or fight, you can spend 1 Pain token to Empower that unit. If you 
     name: "Lithe Agility (Pain)",
     timing: ["myMove", "myCharge"],
     shortDesc: "Re-roll Advance & Charge",
-    fullRules: `In your Movement phase when you select this model’s unit to Advance, or in your Charge phase before you make a Charge roll for this model’s unit, you can spend 1 Pain token to Empower that unit. While that unit is Empowered, you can re-roll Advance and Charge rolls made for that unit.`,
+    fullRules: `In your Movement phase when you select this model’s unit to Advance, or in your Charge phase before you make a Charge roll for this model's unit, you can spend 1 Pain token to Empower that unit. While that unit is Empowered, you can re-roll Advance and Charge rolls made for that unit.`,
     addedBy: "Succubus",
     type: "ability"
   },
@@ -190,26 +180,8 @@ Melee weapons equipped by non-CHARACTER models in this unit have an Attacks char
     name: "Master of Blades (Pain)",
     timing: ["myFight", "oppFight"],
     shortDesc: "Add 1 to Wound roll (Unit)",
-    fullRules: `In the Fight phase, when you select this model’s unit to fight, you can spend 1 Pain token to Empower that unit. While that unit is Empowered, each time a model in that unit makes a melee attack, add 1 to the Wound roll.`,
+    fullRules: `In the Fight phase, when you select this model's unit to fight, you can spend 1 Pain token to Empower that unit. While that unit is Empowered, each time a model in that unit makes a melee attack, add 1 to the Wound roll.`,
     addedBy: "Drazhar",
-    type: "ability"
-  },
-
-  {
-    name: "Fleshcraft (Pain)",
-    timing: ["myCommand"],
-    shortDesc: "Return D3+1 Bodyguard",
-    fullRules: `In your Command phase, you can spend 1 Pain token to Empower this model’s unit. Each time you do, you can return up to D3+1 destroyed Bodyguard models to that unit.`,
-    addedBy: "Haemonculus",
-    type: "ability"
-  },
-
-  {
-    name: "Fear Incarnate",
-    timing: ["oppCommand"],
-    shortDesc: "Battleshock if within 6\" and below Start Str",
-    fullRules: `While an enemy unit is within 6" of this model, worsen the Leadership characteristic of models in that unit by 1. In addition, in the Battle-shock step of your opponent’s Command phase, if such an enemy unit is below its Starting Strength, it must take a Battle-shock test.`,
-    addedBy: "Haemonculus",
     type: "ability"
   },
 
@@ -222,22 +194,12 @@ Melee weapons equipped by non-CHARACTER models in this unit have an Attacks char
     type: "ability"
   },
 
-  {
-    name: "Archon of the Poisoned Tongue (Pain)",
-    timing: ["myShooting", "myFight", "oppFight"],
-    shortDesc: "Sustained hits 1 or Lethal hits (Unit)",
-    fullRules: `In your Shooting phase or the Fight phase, when you select this model’s
-unit to shoot or fight, you can spend 1 Pain token to Empower that unit. If you do, select one of the following abilities: [SUSTAINED HITS 1]; [LETHAL HITS]. Until the end of the phase, while that unit is Empowered, weapons equipped by models in that unit have that selected ability.`,
-    addedBy: "Lady Malys",
-    type: "ability"
-  },
-
 
   {
     name: "Brides of Death (Pain)",
     timing: ["oppFight", "myfight"],
     shortDesc: "Improve Str&AP by 1 (Unit)",
-    fullRules: `In the Fight phase, when you select this model’s unit to fight, you can spend 1 Pain token to Empower that unit. While that unit is Empowered, each time a model in that unit makes a melee attack, improve the Strength and Armour Penetration characteristics of that attack by 1.`,
+    fullRules: `In the Fight phase, when you select this model's unit to fight, you can spend 1 Pain token to Empower that unit. While that unit is Empowered, each time a model in that unit makes a melee attack, improve the Strength and Armour Penetration characteristics of that attack by 1.`,
     addedBy: "Lelith Hesperax",
     type: "ability"
   },
@@ -251,39 +213,6 @@ unit to shoot or fight, you can spend 1 Pain token to Empower that unit. If you 
     addedBy: "Lelith Hesperax",
     type: "ability"
   },
-
-
-  {
-    name: "Lithe Agility (Pain)",
-    timing: ["myMove", "myCharge"],
-    shortDesc: "Re-roll Advance & Charge",
-    fullRules: `In your Movement phase when you select this model’s unit to Advance, or in your Charge phase before you make a Charge roll for this model’s unit, you can spend 1 Pain token to Empower that unit. While that unit is Empowered, you can re-roll Advance and Charge rolls made for that unit.`,
-    addedBy: "Succubus",
-    type: "ability"
-  },
-
-
-  {
-    name: "Experimental Enhancements (Pain)",
-    timing: ["myFight", "oppFight"],
-    shortDesc: "3 attacks/4 attacks with Hazardous",
-    fullRules: `In the Fight phase, when you select this unit to fight, you can spend 1 Pain token to Empower this unit. Each time you do, select one of the following to apply to this unit until the end of the phase:
-Melee weapons equipped by non-CHARACTER models in this unit have an Attacks characteristic of 3.
-Melee weapons equipped by non-CHARACTER models in this unit have an Attacks characteristic of 4 and the [HAZARDOUS] ability.`,
-    addedBy: "Wracks",
-    type: "ability"
-  },
-
-
-  {
-    name: "Acrobatic Gladiators (Pain)",
-    timing: ["myCharge"],
-    shortDesc: "Advance/Fall back and charge",
-    fullRules: `At the start of your Charge phase, you can spend 1 Pain token to Empower this unit. While Empowered, this unit is eligible to declare a charge in a turn in which it Advanced or Fell Back.`,
-    addedBy: "Wyches",
-    type: "ability"
-  },
-
 
   {
     name: "Splinter Racks (Pain)",
@@ -376,7 +305,7 @@ Melee weapons equipped by non-CHARACTER models in this unit have an Attacks char
     name: "Fade Away (Pain)",
     timing: ["oppEndOfFight"],
     shortDesc: "Place into Strategic Reserves",
-    fullRules: `At the end of your opponent’s Fight phase, if this unit is not within Engagement Range of one or more enemy units, you can spend 1 Pain token to Empower this unit. Each time you do, remove this unit from the battlefield and place it into Strategic Reserves.`,
+    fullRules: `At the end of your opponent's Fight phase, if this unit is not within Engagement Range of one or more enemy units, you can spend 1 Pain token to Empower this unit. Each time you do, remove this unit from the battlefield and place it into Strategic Reserves.`,
     addedBy: "Mandrakes",
     type: "ability"
   },

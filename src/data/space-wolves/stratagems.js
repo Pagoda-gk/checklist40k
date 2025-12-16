@@ -46,6 +46,7 @@ TARGET: One SPACE WOLVES unit (excluding MONSTERS and VEHICLES) from your army t
 
 EFFECT: Until the end of the phase, each time a model in your unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3". When doing so, it does not need to end that move closer to the closest enemy model, provided it ends that move as close as possible to the closest enemy unit.`,
         addedBy: "Saga of the Hunter",
+        cost: 1,
         type: "stratagem"
     },
 
@@ -59,6 +60,7 @@ TARGET: That ADEPTUS ASTARTES unit.
 
 EFFECT: Select one objective marker you control that your unit is within range of. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.`,
         addedBy: "Saga of the Hunter",
+        cost: 1,
         type: "stratagem"
     },
 
@@ -72,6 +74,7 @@ TARGET: Two ADEPTUS ASTARTES units from your army within Engagement Range of tha
 
 EFFECT: Until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll.`,
         addedBy: "Saga of the Hunter",
+        cost: 1,
         type: "stratagem"
     },
 
@@ -85,6 +88,7 @@ TARGET: That SPACE WOLVES unit.
 
 EFFECT: Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back.`,
         addedBy: "Saga of the Hunter",
+        cost: 1,
         type: "stratagem"
     },
 
@@ -98,6 +102,7 @@ TARGET: One SPACE WOLVES INFANTRY or SPACE WOLVES BEASTS unit from your army tha
 
 EFFECT: Until the end of the phase, each time a model in your unit makes a Normal, Advance, Fall Back or Charge move, it can move through models (excluding TITANIC models). When doing so, it can move within Engagement Range of enemy models, but unless it is making a Charge move, it cannot end that move within Engagement Range of them.`,
         addedBy: "Saga of the Hunter",
+        cost: 1,
         type: "stratagem"
     },
 
@@ -112,6 +117,7 @@ TARGET: Two ADEPTUS ASTARTES units from your army (excluding BEASTS) that have n
 
 EFFECT: Select one enemy unit visible to both of your units. Until the end of the phase, models in your units can only target that enemy unit (and only if it is an eligible target) and each time a model in one of your units makes an attack, re-roll a Wound roll of 1.`,
         addedBy: "Saga of the Hunter",
+        cost: 1,
         type: "stratagem"
     },
 
@@ -141,6 +147,7 @@ TARGET: One SPACE WOLVES unit from your army that has not been selected to fight
 
 EFFECT: Until the end of the phase, each time a model in your unit makes an attack, add 1 to the Wound roll.`,
         addedBy: "Saga of the Beastslayer",
+        cost: 1,
         type: "stratagem"
     },
     {
@@ -153,6 +160,7 @@ TARGET: One THUNDERWOLF CAVALRY unit from your army that has not been selected t
 
 EFFECT: Until the end of the phase, each time a model in your unit makes a Normal, Advance, Fall Back or Charge move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4" or less in height. When doing so, it can move within Engagement Range of enemy models, but unless it is making a Charge move, it cannot end that move within Engagement Range of them.`,
         addedBy: "Saga of the Beastslayer",
+        cost: 1,
         type: "stratagem"
     },
     {
@@ -165,6 +173,7 @@ TARGET: One ADEPTUS ASTARTES unit from your army that has not been selected to s
 
 EFFECT: Until the end of the phase, after your unit has shot, select one enemy CHARACTER, MONSTER, or VEHICLE unit hit by one or more of those attacks. Until the start of your next Shooting phase, that unit is pinned. While a unit is pinned, subtract 2" from its Move characteristic and subtract 2 from Charge rolls made for it.`,
         addedBy: "Saga of the Beastslayer",
+        cost: 1,
         type: "stratagem"
     },
     {
@@ -177,6 +186,7 @@ TARGET: One ADEPTUS ASTARTES unit from your army that is within 9" of that enemy
 
 EFFECT: Your unit can make a Normal move of up to D6". If your unit has the SPACE WOLVES INFANTRY or THUNDERWOLF CAVALRY keywords, it can make a Normal move of up to 6" instead.`,
         addedBy: "Saga of the Beastslayer",
+        cost: 1,
         type: "stratagem"
     },
     {
@@ -189,6 +199,7 @@ TARGET: One WULFEN INFANTRY or BLOOD CLAWS unit from your army that was selected
 
 EFFECT: Until the end of the phase, after that enemy unit has shot, if one or more models in your unit were destroyed as a result of those attacks, your unit can make an Impetuous move. To do so, roll one D6: your unit can be moved a number of inches up to the result, but your unit must end that move as close as possible to the closest enemy unit (excluding AIRCRAFT). When doing so, those models can be moved within Engagement Range of that enemy unit.`,
         addedBy: "Saga of the Beastslayer",
+        cost: 1,
         type: "stratagem"
     },
     {
@@ -201,6 +212,7 @@ TARGET: One SPACE WOLVES unit from your army that is wholly within 9" of one or 
 
 EFFECT: Remove your unit from the battlefield and place it into Strategic Reserves.`,
         addedBy: "Saga of the Beastslayer",
+        cost: 1,
         type: "stratagem"
     },
 ];

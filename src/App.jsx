@@ -1,28 +1,38 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Setup from "./components/Setup.jsx";
 import Gameplay from "./components/Gameplay.jsx";
 
 export default function App() {
-  const [gameData, setGameData] = useState(null);
+  const [gameData, setGameData] = useState(() => {
+    const saved = localStorage.getItem("gameData");
+    return saved ? JSON.parse(saved) : null;
+  });
+
+  // Save whenever it changes
+  useEffect(() => {
+    if (gameData) {
+      localStorage.setItem("gameData", JSON.stringify(gameData));
+    }
+  }, [gameData]);
+
+  const goHome = () => {
+    localStorage.removeItem("gameData");
+    localStorage.removeItem("phaseIndex");
+    localStorage.removeItem("reminderNotes");
+    setGameData(null);
+  };
+
+
+  if (!gameData) {
+    return <Setup onComplete={setGameData} />;
+  }
 
   // Called when Setup finishes
   const startGame = (data) => {
     setGameData(data);
   };
 
-  // Called when pressing the Home button in Gameplay
-  const goHome = () => {
-    setGameData(null);   // Reset → goes back to Setup screen
-  };
 
-  return (
-    <>
-      {gameData === null ? (
-        <Setup onComplete={startGame} />
-      ) : (
-        <Gameplay gameData={gameData} goHome={goHome} />
-      )}
-    </>
-  );
+  return <Gameplay gameData={gameData} goHome={goHome} />;
 }
 

@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
 
 
 const PHASE_ORDER = [
@@ -15,6 +16,7 @@ const PHASE_ORDER = [
   "oppCharge",
   "oppFight",
   "oppEndOfFight"
+
 ];
 
 const PHASE_NAMES = {
@@ -38,7 +40,29 @@ export default function Gameplay({ gameData, goHome }) {
   // ----------------------
   // Phase navigation
   // ----------------------
-  const [index, setIndex] = useState(firstPlayer === "me" ? 0 : 6);
+  const [index, setIndex] = useState(() => {
+    const saved = localStorage.getItem("phaseIndex");
+    return saved !== null
+      ? Number(saved)
+      : firstPlayer === "me" ? 0 : 6;
+  });
+
+  const [reminderNotes, setReminderNotes] = useState(() => {
+    const saved = localStorage.getItem("reminderNotes");
+    return saved ? JSON.parse(saved) : {};
+  });
+
+  const [openReminderIndex, setOpenReminderIndex] = useState(null);
+
+  useEffect(() => {
+    localStorage.setItem("phaseIndex", index);
+  }, [index]);
+
+  useEffect(() => {
+    localStorage.setItem("reminderNotes", JSON.stringify(reminderNotes));
+  }, [reminderNotes]);
+
+  
   const phaseKey = PHASE_ORDER[index];
   const phaseRules = rules.filter((r) => r.timing.includes(phaseKey));
 
@@ -75,14 +99,23 @@ export default function Gameplay({ gameData, goHome }) {
               <div className="rule-card" key={i}>
                 <details className="rule-details">
                   <summary>
-                    {r.name}  {/* Rule title inside summary */}
+                    <span>{r.name}</span>
+
+                    {typeof r.cost === "number" && (
+                      <span className="cp-cost">
+                        {r.cost} CP
+                      </span>
+                    )}
                   </summary>
+
                   <p>{r.fullRules}</p>
                 </details>
+
                 <p className="short-desc">{r.shortDesc}</p>
                 <em>{r.addedBy}</em>
               </div>
             ))}
+
           </>
         )}
         {abilities.length > 0 && (
@@ -110,6 +143,11 @@ export default function Gameplay({ gameData, goHome }) {
                 <details className="rule-details">
                   <summary>
                     {r.name}  {/* Rule title inside summary */}
+                    {typeof r.cost === "number" && (
+                      <span className="cp-cost">
+                        {r.cost} CP
+                      </span>
+                    )}
                   </summary>
                   <p>{r.fullRules}</p>
                 </details>
@@ -120,7 +158,7 @@ export default function Gameplay({ gameData, goHome }) {
           </>
         )}
 
- <button className="home-button" onClick={goHome}>
+        <button className="home-button" onClick={goHome}>
           ⟵ Home
         </button>
 
@@ -137,7 +175,7 @@ export default function Gameplay({ gameData, goHome }) {
           </button>
         </div>
       </div>
-            {/* Free notes panel */}
+      {/* Free notes panel */}
       <div className="notes-widget">
         <h3 className="notes-header">Notes</h3>
         <textarea
