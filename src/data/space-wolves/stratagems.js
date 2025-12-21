@@ -215,4 +215,106 @@ EFFECT: Remove your unit from the battlefield and place it into Strategic Reserv
         cost: 1,
         type: "stratagem"
     },
+    {
+        name: "Pack's Quarry",
+        timing: ["myCommand"],
+        shortDesc: "Select Hunting Pack",
+        fullRules: `At the start of your Command phase, you can select one of the Hunting Packs listed below. Until the start of your next Command phase, that Hunting Pack is active and its effects apply to all ADEPTUS ASTARTES units from your army. You can only select each Hunting Pack once per battle.
+Encircling Jaws: This unit can re-roll Advance rolls and Charge rolls.
+Hunter’s Eye: Each time a model in this unit makes a ranged attack, add 1 to the Hit roll.
+Ferocious Strike: Each time this unit is selected to fight, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until the end of the phase, weapons equipped by models in this unit have the selected ability.`,
+        addedBy: "Saga of the Great Wolf",
+        type: "ability"
+    },
+
+
+    {
+        name: "The Foe Forseen",
+        timing: ["oppShoot", "myFight", "oppFight"],
+        shortDesc: "Worsen AP by 1",
+        fullRules: `WHEN: Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets.
+
+TARGET: One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT: Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.`,
+        addedBy: "Saga of the Great Wolf",
+        type: "stratagem",
+        cost: 1
+    },
+
+    {
+        name: "Grimnar's Command",
+        timing: ["myCommand"],
+        shortDesc: "Choose different Hunting Pack for a unit",
+        fullRules: `WHEN: Your Movement phase or your Charge phase.
+
+TARGET: One ADEPTUS ASTARTES MOUNTED or ADEPTUS ASTARTES WALKER unit from your army that has not been selected to move or charge this phase.
+
+EFFECT: Until the end of the phase, each time a model in your unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through models (excluding TITANIC models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end a Normal, Advance or Fall Back move within Engagement Range of them.`,
+        addedBy: "Saga of the Great Wolf",
+        type: "stratagem",
+        cost: 1
+
+    },
+
+    {
+        name: "Fenrisian Ferocity",
+        timing: ["myMove", "myCharge"],
+        shortDesc: "Move through models from other units",
+        fullRules: `WHEN: Fight phase, just after an enemy unit has selected its targets.
+
+TARGET: Two ADEPTUS ASTARTES units from your army within Engagement Range of that enemy unit, or one SPACE WOLVES BEASTS unit from your army within Engagement Range of that enemy unit.
+
+EFFECT: Until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll.`,
+        addedBy: "Saga of the Great Wolf",
+        type: "stratagem",
+        cost: 1
+
+    },
+
+    {
+        name: "Unrelenting Hunters",
+        timing: ["myMove"],
+        shortDesc: "Fall back or advance and charge",
+        fullRules: `WHEN: Your Movement phase.
+
+TARGET: One ADEPTUS ASTARTES unit from your army that has not been selected to move this phase.
+
+EFFECT: Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Fell Back. If your unit is a SPACE WOLVES unit, until the end of the turn, it is eligible to declare a charge in a turn in which it Advanced or Fell Back.`,
+        addedBy: "Saga of the Great Wolf",
+        type: "stratagem",
+        cost: 1
+
+    },
+
+    {
+        name: "Eye of the Pack",
+        timing: ["myShoot"],
+        shortDesc: "Add 1 to Wound roll",
+        fullRules: `WHEN: Your Shooting phase.
+
+TARGET: One ADEPTUS ASTARTES unit from your army that has not been selected to shoot this phase.
+
+EFFECT: Until the end of the phase, each time a model in your unit makes an attack, you can add 1 to the Wound roll.`,
+        addedBy: "Saga of the Great Wolf",
+        type: "stratagem",
+        cost: 1
+
+    },
+
+
+    {
+        name: "Battle Instincts",
+        timing: ["oppShooting"],
+        shortDesc: "Move d6\" after being targetted",
+        fullRules: `WHEN: Your opponent’s Shooting phase, just after an enemy unit has shot.
+
+TARGET: One SPACE WOLVES unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT: Your unit can make a Normal move of up to D6".`,
+        addedBy: "Saga of the Great Wolf",
+        type: "stratagem",
+        cost: 1
+
+    }
 ];

@@ -2,9 +2,10 @@
   "name": "Space Wolves",
   "detachments": [
     "Saga of the Hunter",
-    "Saga of the Beastslayer"
+    "Saga of the Beastslayer",
+    "Saga of the Great Wolf"
   ],
   "units": [
-    "Logan Grimnar"
+    
   ]
 }
